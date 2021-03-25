@@ -1,0 +1,10 @@
+{
+    "download_url": "https://go.microsoft.com/fwlink/?linkid=2027144&clcid=0x409",
+    "file_name": "hlk1809_grfx_fod.zip",
+    "install_cmd": "powershell",
+    "install_args": "-ExecutionPolicy Bypass -File @sw_path@\\fod.ps1 -zipPath @sw_path@\\@file_name@",
+    "install_time": {
+        "kit": "before",
+        "driver": "before"
+    }
+ }
