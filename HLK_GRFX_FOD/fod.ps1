@@ -41,5 +41,5 @@ Write-Output "CAB folder: $($cabFolder.FullName)"
 
 Get-Childitem -Path "$($cabFolder.FullName)" -Recurse -Include "*.cab" -File | ForEach-Object {
   Write-Output "Installing: $($_.FullName)"
-  & "dism" "/online" "/add-package" "/packagepath:$($_.FullName)"
+  & "dism" "/online" "/add-package" "/packagepath:$($_.FullName)" "/NoRestart"
 }
