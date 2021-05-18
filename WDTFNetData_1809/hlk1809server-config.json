@@ -1,0 +1,10 @@
+{
+    "download_url": "",
+    "file_name": "WDTFNetData.dll",
+    "install_cmd": "powershell",
+    "install_args": "-Command \"Copy-Item -Path @sw_path@\\@file_name@ -Destination 'C:\\Program Files\\Windows Kits\\10\\Testing\\Runtimes\\WDTF\\RunTime\\DataPlugIns\\Device'\"",
+    "install_time": {
+        "kit": "after",
+        "driver": "before"
+    }
+ }
