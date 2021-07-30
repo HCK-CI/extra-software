@@ -1,0 +1,6 @@
+*
+!.gitignore
+!hlk2022-config.json
+!install.ps1
+!README.md
+!Test-NETHLK.2021.7.28.55.zip
