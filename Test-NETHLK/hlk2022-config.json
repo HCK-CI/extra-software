@@ -1,6 +1,6 @@
 {
     "download_url": "",
-    "file_name": "Test-NETHLK.2021.7.28.55.zip",
+    "file_name": "Test-NETHLK.2021.8.4.60.zip",
     "install_cmd": "powershell",
     "install_args": "-ExecutionPolicy Bypass -File @sw_path@\\install.ps1 -zipPath @sw_path@\\@file_name@",
     "install_time": {
