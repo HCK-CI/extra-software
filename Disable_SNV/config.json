@@ -1,0 +1,13 @@
+{
+    "info": "Disable Strong Name Verification for HLK Preview installation",
+    "based_on": "https://stackoverflow.com/questions/66666423/hlk-strong-name-installation-failed",
+    "download_url": "",
+    "file_name": "snv.ps1",
+    "install_cmd": "powershell",
+    "install_args": "-ExecutionPolicy Bypass -File @sw_path@\\snv.ps1",
+    "install_dest": "studio",
+    "install_time": {
+        "kit": "before",
+        "driver": "before"
+    }
+ }
