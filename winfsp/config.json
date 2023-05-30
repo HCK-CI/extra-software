@@ -3,6 +3,7 @@
     "file_name": "winfsp-1.6.20027.msi",
     "install_cmd": "msiexec",
     "install_args": "/i @sw_path@\\@file_name@ /l*v @temp@\\@file_name@.log /qn",
+    "install_dest": "client",
     "install_time": {
         "kit": "after",
         "driver": "before"

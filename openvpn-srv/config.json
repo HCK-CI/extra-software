@@ -3,6 +3,7 @@
     "file_name": "ovpn.ps1",
     "install_cmd": "powershell",
     "install_args": "-ExecutionPolicy Bypass -File @sw_path@\\ovpn.ps1",
+    "install_dest": "client",
     "install_time": {
         "kit": "after",
         "driver": "after"

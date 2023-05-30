@@ -3,6 +3,7 @@
     "file_name": "hlk1903_grfx_fod.zip",
     "install_cmd": "powershell",
     "install_args": "-ExecutionPolicy Bypass -File @sw_path@\\fod.ps1 -zipPath @sw_path@\\@file_name@",
+    "install_dest": "client",
     "install_time":{
         "kit": "before",
         "driver": "before"
