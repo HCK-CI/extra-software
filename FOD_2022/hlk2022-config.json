@@ -3,6 +3,7 @@
     "file_name": "20348.1.210507-1500.fe_release_amd64fre_SERVER_LOF_PACKAGES_OEM.iso",
     "install_cmd": "powershell",
     "install_args": "-ExecutionPolicy Bypass -File @sw_path@\\fod.ps1 -isoPath @sw_path@\\@file_name@",
+    "install_dest": "client",
     "install_time": {
         "kit": "before",
         "driver": "before"

@@ -3,6 +3,7 @@
     "file_name": "17763.1.180914-1434.rs5_release_amd64fre_SERVER-FOD-PACKAGES_OEM_amd64fre_MULTI.iso",
     "install_cmd": "powershell",
     "install_args": "-ExecutionPolicy Bypass -File @sw_path@\\fod.ps1 -isoPath @sw_path@\\@file_name@",
+    "install_dest": "client",
     "install_time": {
         "kit": "before",
         "driver": "before"
