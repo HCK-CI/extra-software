@@ -11,4 +11,4 @@ For a disconnected system, please use:
 ```Save-Module Test-NetHLK -Path <SomeFolderPath>```
 
 Compress the saved module with all dependencies. For example:
-```Compress-Archive -Path <SomeFolderPath>\*.* -DestinationPath <SomeFolderPath>\Test-NetHLK.<version>.zip```
+```Compress-Archive -Path <SomeFolderPath>\* -DestinationPath Test-NetHLK.<version>.zip```
