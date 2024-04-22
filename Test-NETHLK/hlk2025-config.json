@@ -1,0 +1,11 @@
+{
+    "download_url": "",
+    "file_name": "Test-NetHLK.2024.3.25.84.zip",
+    "install_cmd": "powershell",
+    "install_args": "-ExecutionPolicy Bypass -File @sw_path@\\install.ps1 -zipPath @sw_path@\\@file_name@",
+    "install_dest": "client",
+    "install_time": {
+        "kit": "before",
+        "driver": "before"
+    }
+}
