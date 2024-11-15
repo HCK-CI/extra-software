@@ -1,0 +1,13 @@
+{
+    "info": "Copy missing RoMetadata.dll from installation media",
+    "based_on_note": "https://learn.microsoft.com/en-us/windows-hardware/test/hlk/testref/6ab6df93-423c-4af6-ad48-8ea1049155ae",
+    "download_url": "",
+    "file_name": "dll-copy.ps1",
+    "install_cmd": "powershell",
+    "install_args": "-ExecutionPolicy Bypass -File @sw_path@\\dll-copy.ps1",
+    "install_dest": "client",
+    "install_time": {
+        "kit": "before",
+        "driver": "before"
+    }
+ }
