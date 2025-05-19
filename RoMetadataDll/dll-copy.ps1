@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'
 
 
-if (Test-Path -Path "C:\Windows\System32\RoMetadata.dll" -and Test-Path -Path "C:\Windows\SysWOW64\RoMetadata.dll") {
+if ((Test-Path -Path "C:\Windows\System32\RoMetadata.dll") -and (Test-Path -Path "C:\Windows\SysWOW64\RoMetadata.dll")) {
     Write-Output "RoMetadata.dll already exists in both System32 and SysWOW64"
     exit 0
 }
