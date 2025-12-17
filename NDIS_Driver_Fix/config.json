@@ -1,0 +1,14 @@
+{
+    "info": "Fix unsigned NDIS drivers in HLK by copying signed drivers from backup folders",
+    "based_on_issue": "https://github.com/HCK-CI/AutoHCK/issues/819",
+    "download_url": "",
+    "file_name": "fix-ndis-drivers.ps1",
+    "install_cmd": "powershell",
+    "install_args": "-ExecutionPolicy Bypass -File @sw_path@\\fix-ndis-drivers.ps1",
+    "install_dest": "studio",
+    "install_time": {
+        "kit": "after",
+        "driver": "before"
+    }
+}
+
