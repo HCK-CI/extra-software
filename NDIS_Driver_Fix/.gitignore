@@ -1,0 +1,4 @@
+*
+!.gitignore
+!fix-ndis-drivers.ps1
+!config.json
