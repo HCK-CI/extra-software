@@ -1,0 +1,11 @@
+{
+    "download_url": "",
+    "file_name": "ndprot683.sys",
+    "install_cmd": "powershell",
+    "install_args": "-Command \"Copy-Item -Path @sw_path@\\@file_name@ -Destination 'C:\\Program Files (x86)\\Windows Kits\\10\\Hardware Lab Kit\\Tests\\amd64\\NetHLK\\NDISTest65\\bin\\protocol'\"",
+    "install_dest": "studio",
+    "install_time": {
+        "kit": "after",
+        "driver": "before"
+    }
+}
