@@ -1,0 +1,11 @@
+{
+    "download_url": "https://www.autoitscript.com/cgi-bin/getfile.pl?autoit3/autoit-v3-setup.exe",
+    "file_name": "autoit-v3-setup.exe",
+    "install_cmd": "Start-Process",
+    "install_args": "-Wait -FilePath '@sw_path@\\autoit-v3-setup.exe' -ArgumentList '/S'",
+    "install_dest": "client",
+    "install_time": {
+        "kit": "after",
+        "driver": "before"
+    }
+}
