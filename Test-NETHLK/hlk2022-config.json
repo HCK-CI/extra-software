@@ -1,6 +1,6 @@
 {
     "download_url": "",
-    "file_name": "Test-NetHLK.2026.1.5.97.zip",
+    "file_name": "Test-NetHLK.2026.3.30.98.zip",
     "install_cmd": "powershell",
     "install_args": "-ExecutionPolicy Bypass -File @sw_path@\\install.ps1 -zipPath @sw_path@\\@file_name@",
     "install_dest": "client",
