@@ -15,6 +15,12 @@ if ($isoPath -eq "") {
   Write-Error 'isoPath is not specified. Installation failed.'
 }
 
+$installationType = (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").InstallationType
+if ($installationType -ne "Server Core") {
+  Write-Output "Skipping FOD installation on '$installationType' (Server Core only)."
+  exit 0
+}
+
 $fod_iso_tmp = "${env:TEMP}\fod.iso"
 Copy-Item -Path "$isoPath" -Destination "$fod_iso_tmp"
 
