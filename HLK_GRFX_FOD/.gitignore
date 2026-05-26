@@ -1,6 +1,7 @@
 *
 !.gitignore
 !fod.ps1
+!hlk1607-config.json
 !hlk1809-config.json
 !hlk1809server-config.json
 !hlk1903-config.json
