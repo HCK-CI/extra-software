@@ -1,0 +1,12 @@
+{
+    "info": "VS 2022 Build Tools (MSBuild + VCTools). Do not commit the bootstrapper or offline layout \u2014 place them on the lab host/NFS next to this package (same model as NDIS65_ndprot683_fix).",
+    "download_url": "",
+    "file_name": "vs_BuildTools.exe",
+    "install_cmd": "powershell",
+    "install_args": "-ExecutionPolicy Bypass -File @sw_path@\\install-vs-buildtools.ps1 -SwPath @sw_path@",
+    "install_dest": "client",
+    "install_time": {
+        "kit": "after",
+        "driver": "before"
+    }
+}
