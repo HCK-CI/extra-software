@@ -1,0 +1,5 @@
+*
+!.gitignore
+!config.json
+!install_iozone.ps1
+!install_iozone_worker.ps1
