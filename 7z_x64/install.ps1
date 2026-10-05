@@ -14,6 +14,11 @@ $stageDir = 'C:\7-Zip'
 New-Item -ItemType Directory -Force -Path $stageDir | Out-Null
 Copy-Item -Force -LiteralPath $MsiPath -Destination (Join-Path $stageDir '7z-x64.msi')
 
+if (-not [Environment]::Is64BitOperatingSystem) {
+    Write-Output "PASS: skip msiexec of 7z x64 on 32-bit Windows; MSI staged at $stageDir\7z-x64.msi"
+    exit 0
+}
+
 $log = Join-Path $env:TEMP '7z-install.log'
 $p = Start-Process -FilePath 'msiexec.exe' -Wait -PassThru -ArgumentList @(
     '/i', $MsiPath,
