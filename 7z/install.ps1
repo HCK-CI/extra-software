@@ -9,13 +9,21 @@ if (-not (Test-Path -LiteralPath $MsiPath)) {
     throw "7z MSI not found: $MsiPath"
 }
 
+$msiName = Split-Path -Leaf $MsiPath
+$want64 = $msiName -match '(?i)x64'
+$os64 = [Environment]::Is64BitOperatingSystem
+
 # Keep a copy for support_win_fs (elevate installer from virtiofs share).
 $stageDir = 'C:\7-Zip'
 New-Item -ItemType Directory -Force -Path $stageDir | Out-Null
-Copy-Item -Force -LiteralPath $MsiPath -Destination (Join-Path $stageDir '7z-x86.msi')
+Copy-Item -Force -LiteralPath $MsiPath -Destination (Join-Path $stageDir $msiName)
 
-if ([Environment]::Is64BitOperatingSystem) {
-    Write-Output "PASS: skip msiexec of 7z x86 on 64-bit Windows; MSI staged at $stageDir\7z-x86.msi"
+if ($want64 -and -not $os64) {
+    Write-Output "PASS: skip msiexec of 7z x64 on 32-bit Windows; MSI staged at $stageDir\$msiName"
+    exit 0
+}
+if (-not $want64 -and $os64) {
+    Write-Output "PASS: skip msiexec of 7z x86 on 64-bit Windows; MSI staged at $stageDir\$msiName"
     exit 0
 }
 
@@ -36,4 +44,4 @@ if (-not (Test-Path -LiteralPath $sevenZipExe)) {
     throw "7z.exe missing after MSI install (expected $sevenZipExe, log=$log)"
 }
 
-Write-Output "PASS: 7z installed at $sevenZipExe; MSI staged at $stageDir\7z-x86.msi (msiexec exit $($p.ExitCode))"
+Write-Output "PASS: 7z installed at $sevenZipExe; MSI staged at $stageDir\$msiName (msiexec exit $($p.ExitCode))"
