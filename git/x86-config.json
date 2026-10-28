@@ -1,0 +1,11 @@
+{
+    "download_url": "https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/MinGit-2.47.1-32-bit.zip",
+    "file_name": "MinGit-32-bit.zip",
+    "install_cmd": "powershell",
+    "install_args": "-ExecutionPolicy Bypass -File @sw_path@\\install.ps1 -ZipPath @sw_path@\\@file_name@",
+    "install_dest": "client",
+    "install_time": {
+        "kit": "after",
+        "driver": "before"
+    }
+}
