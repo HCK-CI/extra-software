@@ -1,0 +1,5 @@
+*
+!.gitignore
+!x64-config.json
+!x86-config.json
+!install.ps1
