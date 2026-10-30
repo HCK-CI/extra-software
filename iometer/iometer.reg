@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; Suppresses the Iometer first-run EULA dialog (blocks /c command-line mode).
+; Version must match the IOmeter.exe file version string: 1.1.0.
+; Imported into HKCU by the test worker (iometer_worker.ps1) as the
+; interactive user, matching the winutils/KAR recipe.
+
+[HKEY_CURRENT_USER\Software\iometer.org\Iometer\Settings]
+"Version"="1.1.0"
