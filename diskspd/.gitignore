@@ -1,0 +1,6 @@
+# DiskSpd.zip is downloaded by AutoHCK at package prepare time
+DiskSpd.zip
+*
+!.gitignore
+!config.json
+!install.ps1
